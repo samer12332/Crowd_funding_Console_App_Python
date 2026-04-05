@@ -1,0 +1,18 @@
+[
+  {
+    "user_id": 1,
+    "first_name": "samer",
+    "last_name": "yousry",
+    "email": "sameryousry99@gmail.com",
+    "password": "123456",
+    "mobile_phone": "01017306593"
+  },
+  {
+    "user_id": 2,
+    "first_name": "ahmed",
+    "last_name": "yousry",
+    "email": "ahmed@gmail.com",
+    "password": "123456",
+    "mobile_phone": "01154511045"
+  }
+]

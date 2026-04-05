@@ -1,0 +1,11 @@
+[
+  {
+    "project_id": 1,
+    "owner_user_id": 1,
+    "title": "crowd_funding",
+    "details": "test description",
+    "total_target": 300.0,
+    "start_date": "2026-05-04",
+    "end_date": "2026-05-06"
+  }
+]
