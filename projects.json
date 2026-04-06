@@ -7,5 +7,14 @@
     "total_target": 300.0,
     "start_date": "2026-05-04",
     "end_date": "2026-05-06"
+  },
+  {
+    "project_id": 2,
+    "owner_user_id": 1,
+    "title": "test2",
+    "details": "test2 description",
+    "total_target": 1000.0,
+    "start_date": "2025-04-06",
+    "end_date": "2025-04-09"
   }
 ]

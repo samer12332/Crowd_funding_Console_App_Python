@@ -1,4 +1,5 @@
-﻿from storage import load_projects, save_projects
+﻿from datetime import datetime
+from storage import load_projects, save_projects
 from validators import parse_valid_date
 from utils import get_next_id
 
@@ -6,18 +7,13 @@ from utils import get_next_id
 def create_project(logged_in_user):
     projects = load_projects()
 
-    
     title = input("Project title: ").strip()
-    details = input("Project details: ").strip()
-    total_target_str = input("Total target: ").strip()
-    start_date_str = input("Start date (YYYY-MM-DD): ").strip()
-    end_date_str = input("End date (YYYY-MM-DD): ").strip()
-   
-
     if not title:
         print("Title is required.")
         return
 
+    details = input("Project details: ").strip()
+    total_target_str = input("Total target: ").strip()
     try:
         total_target = float(total_target_str)
         if total_target <= 0:
@@ -27,11 +23,18 @@ def create_project(logged_in_user):
         print("Total target must be a number.")
         return
 
+    start_date_str = input("Start date (YYYY-MM-DD): ").strip()
+    end_date_str = input("End date (YYYY-MM-DD): ").strip()
+
     start_date = parse_valid_date(start_date_str)
     end_date = parse_valid_date(end_date_str)
 
     if not start_date or not end_date:
         print("Invalid date format. Use YYYY-MM-DD.")
+        return
+
+    if start_date.date() <= datetime.today().date():
+        print("Start date must be a future date.")
         return
 
     if start_date >= end_date:
@@ -200,3 +203,4 @@ def find_project_by_id(projects, project_id):
         if project.get("project_id") == project_id:
             return project
     return None
+

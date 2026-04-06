@@ -1,23 +1,2 @@
-﻿# Python cache
-__pycache__/
-*.py[cod]
+﻿__pycache__/
 
-# Virtual environments
-.venv/
-venv/
-env/
-
-# IDE/editor
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Test/cache tooling
-.pytest_cache/
-.mypy_cache/
-
-# Local runtime artifacts
-*.log
